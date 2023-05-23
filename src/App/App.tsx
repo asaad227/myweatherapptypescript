@@ -88,14 +88,18 @@ function handleFunctin(){
 
 
   return (
+   
     <div className='App'>
-      <h1 className='header'>Weather App</h1>
+     <div className='search'>
       <input type="text" value={location} onChange={(e) => setLocation(e.target.value)} placeholder='Enter your location here....' />
       <button type="button" onClick={handleFunctin}>Search</button>
+      </div>
   
       <WeatherLocation data={data} loading={loading} error={error} />
+      <h1 className='sub-header'>7 Days weather forecast</h1>
       <WeekForecast forecastday={forecastday} loading={loading} error={error} />  
     </div>
+   
   );
 }
 
