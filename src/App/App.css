@@ -1,7 +1,9 @@
-.App {
-
+.App{
+  width: 90vw;
+  height: auto;
   text-align: center;
 }
+  
 
 .header{
   font-style: italic;
@@ -16,14 +18,34 @@
 
 
 .App input{
-  width: 24%;
   margin: 5px auto;
   padding: 5px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+  background-color: #f5f5f5;
+  border: 1px solid #333;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 200;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+
+}
+
+.App button{
+  margin: 5px auto;
+  padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
   background-color: #f5f5f5;
   border: 1px solid #333;
   border-radius: 5px;
@@ -40,26 +62,6 @@
 .App input:hover{
   box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.4);
 }
-.App button{
-  width: 25%;
-  margin: 5px auto;
-  padding: 5px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
-  background-color: #f5f5f5;
-  border: 1px solid #333;
-  border-radius: 5px;
-  outline: none;
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: 200;
-  color: #333;
-  text-decoration: none;
-  transition: all 0.2s ease-in-out;
-}
 
 .App button:hover{
   box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.4);
@@ -72,9 +74,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 25%;
-  height: 25%;
-  margin: 20px auto;
+  /* margin: 20px auto; */
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   background-color: #f5f5f5;
@@ -96,97 +96,73 @@
 }
 
 .flex-container p {
-  width: 100%;
   font-style: italic;
-
   margin: 0;
   padding: 0;
-  font-size: 1rem;
-  font-weight: 300;
+  font-size: 0.5rem;
   color: #333;
 
 }
+.flex-forecast{
+  display: flex;
+  flex-direction: row;
+}
+.forecast-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 10vw;
+  height: auto;
+  margin: 20px auto;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
 
-
+.forecast-container:hover {
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.4);
+}
+.forecast-container p{
+  font-size: 0.5rem;
+  font-weight: 200;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
 
 
 @media screen and (max-width: 768px) {
-  .App {
-    width: 90vw;
-    height: 90vh;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #f5f5f5;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
 
-  .App input{
-    width: 63%;
-    margin: 5px auto;
-    padding: 5px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
-    background-color: #f5f5f5;
-    border: 1px solid #333;
-    border-radius: 5px;
-    outline: none;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: 200;
-    color: #333;
-    text-decoration: none;
-    transition: all 0.2s ease-in-out;
-  
-  }
-
- .App button{
-    width: 65%;
-    margin: 5px auto;
-    padding: 5px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
-    background-color: #f5f5f5;
-    border: 1px solid #333;
-    border-radius: 5px;
-    outline: none;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: 200;
-    color: #333;
-    text-decoration: none;
-    transition: all 0.2s ease-in-out;
-  
-  }
-  .flex-container {
-    width: 65%;
-    height: 40%;
-  }
-  .flex-container p {
-    font-size: 0.8rem;
-  }
- }
-
- .header {
-  width: 65%;
-  font-size: 1.5rem;
+.forecast-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 10vw;
+  height: auto;
+  margin: 20px auto;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background-color: #f5f5f5;
 }
- 
-  .flex-container h2 {
-    font-size: 1rem;
-  }
-  .flex-container p {
-    font-size: 0.8rem;
-  }
+
+.forecast-container p{
+  font-size: 0.5rem;
+  font-weight: 200;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+  
+}
+
+
+
+
+
+
+
+
 
   
