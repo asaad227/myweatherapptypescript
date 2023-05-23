@@ -31,7 +31,7 @@ export default function WeatherLocation({ data, loading, error }: WeatherLocatio
           <p>{data.location.region}</p>
           <p>{data.location.country}</p>
           <p>{data.location.localtime}</p>
-          <p>{data.current.temp_c}</p>
+          <p>{data.current.temp_c}°C</p>
           <p>{data.current.condition.text}</p>
           <img src={data.current.condition.icon} alt={data.current.condition.text} />
         </div>

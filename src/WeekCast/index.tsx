@@ -34,8 +34,8 @@ const WeekForecast: React.FC<WeekForecastProps> = ({ forecastday, loading, error
           <p>Date: {day.date}</p>
           <p>Sunrise: {day.astro.sunrise}</p>
           <p>Sunset: {day.astro.sunset}</p>
-          <p>Maxtemp: {day.day.maxtemp_c}</p>
-          <p>Mintemp: {day.day.mintemp_c}</p>
+          <p>Maxtemp: {day.day.maxtemp_c}°C</p>
+          <p>Mintemp: {day.day.mintemp_c}°C</p>
           <p>{day.day.condition.text}</p>
           <img src={day.day.condition.icon} alt={day.day.condition.text} />
         </div>
