@@ -8,6 +8,7 @@
   height: auto;
   text-align: center;
   box-sizing: border-box;
+  margin: 10px auto;
  
 }
   
@@ -128,6 +129,7 @@ text-align: center;
   border-radius: 10px;
   background-color: #f5f5f5;
   padding: 2px;
+  margin: 40px auto;
 }
 
 .forecast-container:hover {
