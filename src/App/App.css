@@ -1,11 +1,19 @@
 .App{
-  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100vw;
+  justify-content: center;
   height: auto;
   text-align: center;
+  box-sizing: border-box;
+ 
 }
   
 
 .header{
+  width: 84vw;
   font-style: italic;
   box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
@@ -18,6 +26,7 @@
 
 
 .App input{
+  width: 84vw;
   margin: 5px auto;
   padding: 5px;
   display: flex;
@@ -33,7 +42,7 @@
   font-size: 1rem;
   font-weight: 200;
   color: #333;
-  text-decoration: none;
+text-align: center;
   transition: all 0.2s ease-in-out;
 
 }
@@ -71,10 +80,11 @@
 
 .flex-container {
   display: flex;
+  width: 84vw;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  /* margin: 20px auto; */
+  margin: 20px auto;
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   background-color: #f5f5f5;
@@ -112,57 +122,42 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 10vw;
+  width: 12vw;
   height: auto;
-  margin: 20px auto;
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   background-color: #f5f5f5;
+  padding: 2px;
 }
 
 .forecast-container:hover {
+  width: 15vw;
+  font-size: larger;
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.4);
 }
 .forecast-container p{
-  font-size: 0.5rem;
-  font-weight: 200;
-  color: #333;
   margin: 0;
   padding: 0;
+  font-size: 0.5rem;
+  color: #333;
+}
+.forecast-container p:hover{
+  font-size: 0.7rem;
+  color:rgba(200, 100, 100, 0.8);
 }
 
-
-@media screen and (max-width: 768px) {
-
-.forecast-container{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 10vw;
+.forecast-container img{
+  width: 5vw;
   height: auto;
-  margin: 20px auto;
-  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  background-color: #f5f5f5;
-}
-
-.forecast-container p{
-  font-size: 0.5rem;
-  font-weight: 200;
-  color: #333;
   margin: 0;
   padding: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .forecast-container p{
+    font-size: 0.3rem;
+  }
 }
   
-}
-
-
-
-
-
-
-
-
 
   
