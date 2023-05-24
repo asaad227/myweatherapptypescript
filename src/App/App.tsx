@@ -52,9 +52,6 @@ function App(): JSX.Element {
         } else {
           throw response;
         }
-      
-
-
     } catch (error) {
       console.error("Error fetching data: ", error);
       setError(error);
