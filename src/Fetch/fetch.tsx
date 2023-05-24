@@ -7,6 +7,7 @@ interface WeatherData {
   };
   current: {
     temp_c: number;
+    feelslike_c: number;
     condition: {
       text: string;
       icon: string;
@@ -34,9 +35,10 @@ export default function WeatherLocation({ data, loading, error }: WeatherLocatio
           <h1>{data.location.name}</h1>
           <p>{data.location.region}</p>
           <p>{data.location.country}</p>
-          <p>Date: {dateIinfo}</p>
-          <p>Time: {timeInfo}</p>
-          <p>{data.current.temp_c}°C</p>
+          <p>Date: <span>{dateIinfo}</span></p>
+          <p>Time: <span>{timeInfo}</span></p>
+          <p>Current temp: <span>{data.current.temp_c}°C</span></p>
+          <p>Feels like: <span>{data.current.feelslike_c}°C</span></p>
           <p className="condition">{data.current.condition.text}</p>
           <img src={data.current.condition.icon} alt={data.current.condition.text} />
         </div>
