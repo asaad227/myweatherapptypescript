@@ -3,34 +3,33 @@
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
-  width: 95vw;
+  width: 90vw;
   justify-content: center;
   height: auto;
   text-align: center;
   box-sizing: border-box;
   box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-  margin: 40px auto;
+  margin: 10px auto;
  
 }
   
 
 .header{
   text-align: center;
-  width: 95vw;
+  width: 90vw;
   font-style: italic;
   box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   font-size: 2rem;
   font-weight: 200;
   color: #333;
-  margin: 20px auto;
-  margin-bottom: -10px;
+  margin: 10px auto;
   padding: 0;
 }
 .sub-header{
   text-align: center;
-  width: 90vw;
+  width: 78vw;
   font-style: italic;
   box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
@@ -99,7 +98,7 @@ text-align: center;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin: 7vh auto;
+  margin: 0 auto;
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   background-color: #f5f5f5;
@@ -194,20 +193,31 @@ text-align: center;
 
 
 @media screen and (max-width: 600px) {
-  .App{
-    width: 95vw;
-  }
+ 
   .App input{
     width: 50vw;
   }
   .flex-container {
+    margin: 10px auto;
     width: 72vw;
   }
+  .header{
+    width: 90vw;
+  }
+  .sub-header{
+    margin: 10px auto;
+    width: 85vw;
+  }
+
+ 
   .flex-container p{
     font-size: 0.5rem;
   }
   .flex-container h1 {
     font-size: 1.5rem;
+  }
+  .flex-forecast{
+    margin: 10px auto;
   }
  .forecast-container{
     width: 11.5vw;
