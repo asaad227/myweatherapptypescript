@@ -21,6 +21,10 @@ interface WeatherLocationProps {
 }
 
 export default function WeatherLocation({ data, loading, error }: WeatherLocationProps): JSX.Element {
+  const dateIinfo = data?.location.localtime.slice(0, 10);
+  const timeInfo = data?.location.localtime.slice(11, 16);
+  
+  
   return (
     <div className="flex-container">
       {loading && <p>Loading...</p>}
@@ -30,9 +34,10 @@ export default function WeatherLocation({ data, loading, error }: WeatherLocatio
           <h1>{data.location.name}</h1>
           <p>{data.location.region}</p>
           <p>{data.location.country}</p>
-          <p>{data.location.localtime}</p>
+          <p>Date: {dateIinfo}</p>
+          <p>Time: {timeInfo}</p>
           <p>{data.current.temp_c}°C</p>
-          <p>{data.current.condition.text}</p>
+          <p className="condition">{data.current.condition.text}</p>
           <img src={data.current.condition.icon} alt={data.current.condition.text} />
         </div>
       )}

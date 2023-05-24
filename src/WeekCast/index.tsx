@@ -31,12 +31,12 @@ const WeekForecast: React.FC<WeekForecastProps> = ({ forecastday, loading, error
       {error && <p>Something went wrong: {error.message}</p>}
       {forecastday.map((day) => (
         <div className='forecast-container' key={day.date}>
-          <p>Date: {day.date}</p>
-          <p>Sunrise: {day.astro.sunrise}</p>
-          <p>Sunset: {day.astro.sunset}</p>
-          <p>Maxtemp: {day.day.maxtemp_c}°C</p>
-          <p>Mintemp: {day.day.mintemp_c}°C</p>
-          <p>{day.day.condition.text}</p>
+          <p><span>Date:</span> {day.date}</p>
+          <p><span>Sunrise:</span> {day.astro.sunrise}</p>
+          <p><span>Sunset:</span> {day.astro.sunset}</p>
+          <p><span>Maxtemp:</span> {day.day.maxtemp_c}°C</p>
+          <p><span>Mintemp:</span> {day.day.mintemp_c}°C</p>
+          <p className='condition'>{day.day.condition.text}</p>
           <img src={day.day.condition.icon} alt={day.day.condition.text} />
         </div>
       ))}
