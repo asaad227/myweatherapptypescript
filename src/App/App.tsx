@@ -49,10 +49,12 @@ function App(): JSX.Element {
           const json = await response.json();
           setData(json);
         } else {
+          setItems(initialItems)
+          alert(`Please enter a valid location`)
           throw response;
         }
       
-    } catch (error) {
+    } catch (error)   {
       console.error("Error fetching data: ", error);
       setError(error);
     }
@@ -74,7 +76,7 @@ function App(): JSX.Element {
         } else {
           throw response;
         }
-    } catch (error) {
+    } catch (error){
       console.error("Error fetching data: ", error);
       setError(error);
     }
@@ -86,7 +88,7 @@ function App(): JSX.Element {
 
   function handleFunctin(){
     if (location === "") {
-      alert("Please enter a location")
+      alert(`Please enter a location`)
     }else{
       setItems(location)
       fetchData();
@@ -105,9 +107,9 @@ function App(): JSX.Element {
       <button type="button" onClick={handleFunctin}>Search</button>
       </div>
   
-      <WeatherLocation data={data} loading={loading} error={error} />
+      <WeatherLocation data={data} loading={loading} error={error}  />
       <h1 className='sub-header'>7 Days weather forecast</h1>
-      <WeekForecast forecastday={forecastday} loading={loading} error={error} />  
+      <WeekForecast forecastday={forecastday} loading={loading} error={error}/>  
     </div>
    
   );

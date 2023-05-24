@@ -19,9 +19,7 @@ interface Day {
 interface WeekForecastProps {
   forecastday: Day[];
   loading: boolean;
-  error: {
-    message: string;
-  } | null;
+  error: any;
 }
 
 const WeekForecast: React.FC<WeekForecastProps> = ({ forecastday, loading, error }) => {
