@@ -95,7 +95,7 @@ text-align: center;
 
 .flex-container {
   display: flex;
-  width: 56vw;
+  width: 30vw;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -144,7 +144,7 @@ text-align: center;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 8vw;
+  width: 11vw;
   height: auto;
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -155,7 +155,7 @@ text-align: center;
 }
 
 .forecast-container:hover {
-  width: 11vw;
+  width: 11.5vw;
   font-size: larger;
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.4);
 }
@@ -190,14 +190,23 @@ text-align: center;
 
 
 @media screen and (max-width: 600px) {
+  .App{
+    width: 95vw;
+  }
+  .App input{
+    width: 50vw;
+  }
   .flex-container {
-    width: 85vw;
+    width: 72vw;
+  }
+  .flex-container p{
+    font-size: 0.5rem;
   }
   .flex-container h1 {
     font-size: 1.5rem;
   }
  .forecast-container{
-    width: 11vw;
+    width: 11.5vw;
   }
   .forecast-container p{
     font-size: 0.3rem;
