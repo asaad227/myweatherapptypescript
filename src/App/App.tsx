@@ -10,11 +10,32 @@ function App(): JSX.Element {
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<any>(null);
   const [location, setLocation] = useState<string>("");
-  const [items, setItems] = useState<any>(JSON.parse(localStorage.getItem("items")||"London"));
+  let initialItems = "London";
+  try {
+    const storedItems = localStorage.getItem("items");
+    if (storedItems) {
+      initialItems = JSON.parse(storedItems);
+    }
+  } catch (error) {
+    // Handle the JSON parsing error, e.g., set a default value
+    initialItems = "London";
+    console.error("Error parsing items from localStorage:", error);
+  }
+  
+  const [items, setItems] = useState<string>(initialItems);
+  
   useEffect(() => {
-    localStorage.setItem("items", JSON.stringify(items));
-    setItems(items);
+    try {
+      localStorage.setItem("items", JSON.stringify(items));
+    } catch (error) {
+      // Handle the error when setting items in localStorage
+      console.error("Error setting items in localStorage:", error);
+    }
+    // Rest of your code...
   }, [items]);
+  
+  // Rest of your code...
+  
 
   async function fetchData() {
     setLoading(true);
