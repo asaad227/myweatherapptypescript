@@ -8,6 +8,8 @@ interface WeatherData {
   current: {
     temp_c: number;
     feelslike_c: number;
+    humidity: number;
+    wind_mph: number;
     condition: {
       text: string;
       icon: string;
@@ -25,7 +27,7 @@ export default function WeatherLocation({ data, loading, error }: WeatherLocatio
   const dateIinfo = data?.location.localtime.slice(0, 10);
   const timeInfo = data?.location.localtime.slice(11, 16);
   
-  
+
   return (
     <div className="flex-container">
       {loading && <p>Loading...</p>}
@@ -39,6 +41,8 @@ export default function WeatherLocation({ data, loading, error }: WeatherLocatio
           <p>Time: <span>{timeInfo}</span></p>
           <p>Current temp: <span>{data.current.temp_c}°C</span></p>
           <p>Feels like: <span>{data.current.feelslike_c}°C</span></p>
+          <p>Humidity: <span>{data.current.humidity}%</span></p>
+          <p>Wind: <span>{data.current.wind_mph}mph</span></p>
           <p className="condition">{data.current.condition.text}</p>
           <img src={data.current.condition.icon} alt={data.current.condition.text} />
         </div>
