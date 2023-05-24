@@ -31,10 +31,12 @@ function App(): JSX.Element {
       // Handle the error when setting items in localStorage
       console.error("Error setting items in localStorage:", error);
     }
-    // Rest of your code...
+    fetchData();
+    fetchWeekData();
+
   }, [items]);
   
-  // Rest of your code...
+
   
 
   async function fetchData() {
@@ -92,10 +94,7 @@ function App(): JSX.Element {
     }
   }
 
-  useEffect(() => {
-    fetchData();
-    fetchWeekData();
-  }, [items]);
+
 
 
   return (
