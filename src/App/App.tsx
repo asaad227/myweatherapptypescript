@@ -10,11 +10,10 @@ function App(): JSX.Element {
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<any>(null);
   const [location, setLocation] = useState<string>("");
-  const [items, setItems] = useState<string>(
-    JSON.parse(localStorage.getItem("items") || "London") as string
-  );
+  const [items, setItems] = useState<any>(JSON.parse(localStorage.getItem("items")||"London"));
   useEffect(() => {
     localStorage.setItem("items", JSON.stringify(items));
+    setItems(items);
   }, [items]);
 
   async function fetchData() {
