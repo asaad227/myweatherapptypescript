@@ -16,7 +16,7 @@ function App(): JSX.Element {
     if (storedItems) {
       initialItems = JSON.parse(storedItems);
     }
-  } catch (error) {
+  } catch (errors) {
     // Handle the JSON parsing error, e.g., set a default value
     initialItems = "London";
     console.error("Error parsing items from localStorage:", error);
@@ -27,7 +27,7 @@ function App(): JSX.Element {
   useEffect(() => {
     try {
       localStorage.setItem("items", JSON.stringify(items));
-    } catch (error) {
+    } catch (errors) {
       // Handle the error when setting items in localStorage
       console.error("Error setting items in localStorage:", error);
     }
@@ -54,9 +54,9 @@ function App(): JSX.Element {
           throw response;
         }
       
-    } catch (error)   {
+    } catch (errors)   {
       console.error("Error fetching data: ", error);
-      setError(error);
+      setError(errors);
     }
     setLoading(false);
     setLocation("");
@@ -76,9 +76,9 @@ function App(): JSX.Element {
         } else {
           throw response;
         }
-    } catch (error){
+    } catch (errors){
       console.error("Error fetching data: ", error);
-      setError(error);
+      setError(errors);
     }
     setLoading(false);
     setLocation("")
@@ -107,9 +107,9 @@ function App(): JSX.Element {
       <button type="button" onClick={handleFunctin}>Search</button>
       </div>
   
-      <WeatherLocation data={data} loading={loading} error={error}  />
+      <WeatherLocation data={data} loading={loading}   />
       <h1 className='sub-header'>7 Days weather forecast</h1>
-      <WeekForecast forecastday={forecastday} loading={loading} error={error}/>  
+      <WeekForecast forecastday={forecastday} loading={loading} />  
     </div>
    
   );

@@ -20,10 +20,9 @@ interface WeatherData {
 interface WeatherLocationProps {
   data: WeatherData | null;
   loading: boolean;
-  error: any;
 }
 
-export default function WeatherLocation({ data, loading, error }: WeatherLocationProps): JSX.Element {
+export default function WeatherLocation({ data, loading }: WeatherLocationProps): JSX.Element {
   const dateIinfo = data?.location.localtime.slice(0, 10);
   const timeInfo = data?.location.localtime.slice(11, 16);
   
@@ -31,7 +30,6 @@ export default function WeatherLocation({ data, loading, error }: WeatherLocatio
   return (
     <div className="flex-container">
       {loading && <p>Loading...</p>}
-      {error && <p>Something went wrong: {error.message}</p>}
       {data && (
         <div>
           <h1>{data.location.name}</h1>

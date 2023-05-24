@@ -19,14 +19,12 @@ interface Day {
 interface WeekForecastProps {
   forecastday: Day[];
   loading: boolean;
-  error: any;
 }
 
-const WeekForecast: React.FC<WeekForecastProps> = ({ forecastday, loading, error }) => {
+const WeekForecast: React.FC<WeekForecastProps> = ({ forecastday, loading}) => {
   return (
     <div className='flex-forecast'>
       {loading && <p>Loading...</p>}
-      {error && <p>Something went wrong: {error.message}</p>}
       {forecastday.map((day) => (
         <div className='forecast-container' key={day.date}>
           <p><span>Date:</span> {day.date}</p>
