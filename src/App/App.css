@@ -95,7 +95,7 @@ text-align: center;
 
 .flex-container {
   display: flex;
-  width: 90vw;
+  width: 56vw;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -144,18 +144,18 @@ text-align: center;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 11vw;
+  width: 8vw;
   height: auto;
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
+  border-radius: 4px;
   background-color: #f5f5f5;
-  padding: 2px;
- margin: 20px auto;
- margin-left: 4px;
+  padding: 1px;
+  margin: 20px auto;
+  margin-left: 2px;
 }
 
 .forecast-container:hover {
-  width: 15vw;
+  width: 11vw;
   font-size: larger;
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.4);
 }
@@ -190,6 +190,15 @@ text-align: center;
 
 
 @media screen and (max-width: 600px) {
+  .flex-container {
+    width: 85vw;
+  }
+  .flex-container h1 {
+    font-size: 1.5rem;
+  }
+ .forecast-container{
+    width: 11vw;
+  }
   .forecast-container p{
     font-size: 0.3rem;
   }
